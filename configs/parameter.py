@@ -20,8 +20,6 @@ class Params(object):
 
     def root_params(self):
         self.root_file = '/Your/path/to/record'
-        self._input_data_rootFld = '/Your/path/to/dataset'
-
         self._debug_data_rootFld = os.path.join(self.root_file, 'debug', self.exp_id)
         self.summary_dir = os.path.join(self.root_file, 'experiment/train/log/', self.exp_id)
         print('self.summary_dir', self.summary_dir)
@@ -101,10 +99,10 @@ class Params(object):
         self.z_far = 1000.0
 
     def load_params(self):
+        self.dsp_factor = 4
+        self.datasetFolder = '/Your/path/to/dataset'
         self.modelName = "SCENE_NAME"
         self.splitName = None
-        self.dsp_factor = 4
-        self.datasetFolder = os.path.join(self._input_data_rootFld, 'aLit')
         self.imgNamePattern = os.path.join(self.datasetFolder, self.modelName, "images_{}/*.JPG".format(self.dsp_factor))
         self.poseFolder = os.path.join(self.datasetFolder, self.modelName, "cams_{}".format(self.dsp_factor))
         self.atlas_load_path = os.path.join(self.datasetFolder, self.modelName, "1.obj")
