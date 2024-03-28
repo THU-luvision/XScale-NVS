@@ -79,7 +79,7 @@ if __name__ == "__main__":
     dsp_ratio = 1. / dsp_factor
     key = ''
 
-    subject_file = "/media/womoer/Wdata/data/LY/GuLangYu"
+    subject_file = "/Path/to/Your/Project"
     in_img_file = os.path.join(subject_file, "images")
     xml_file = os.path.join(subject_file, "cams.xml")
 
