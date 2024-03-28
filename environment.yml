@@ -1,0 +1,28 @@
+name: xscalenvs
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - iopath
+  - jinja2
+  - matplotlib
+  - numpy
+  - python
+  - pytorch
+  - torchvision
+  - tqdm
+  - pip:
+    - imageio
+    - nvdiffrast
+    - open3d
+    - opencv-python
+    - pillow
+    - pyparsing
+    - scikit-image
+    - scikit-learn
+    - scipy
+    - tensorboard
+    - tensorboardx
+    - tinycudann
+    - trimesh
