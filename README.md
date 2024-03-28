@@ -121,7 +121,7 @@ All configs for the sebsequent neural rendering pipeline are stored in ```config
     - The default values can always be fixed for good results.
 
 - Data loading configs (`load_params`):
-    - `modelName`: Set as the SCENE_NAME, where the folder `images_{dsp_factor}` and `cams_{dsp_factor}`, and the mesh `1.obj` should be saved in `_input_data_rootFld/modelName/..`
+    - `modelName`: Set as the SCENE_NAME. The folder `images_{dsp_factor}` and `cams_{dsp_factor}`, and the mesh `1.obj` should be saved in `_input_data_rootFld/modelName/..`
     - `all_view_list`: Specify the list of view_id (from 0 to the total number of the image / camera items) to be included from `images_{dsp_factor}` and `cams_{dsp_factor}`.
     - `test_view_list`: Specify the list of view_id to be held out from training for testing.
 
