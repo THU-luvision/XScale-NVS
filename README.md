@@ -91,7 +91,7 @@ K20 K21 K22
 
 - For **Agisoft Metashape**, convert the resulting metashape camera file ```cams.xml``` to the ```cams``` folder using ```scripts/xml2txt.py```, where the following parameters are needed to be specified:
 
-    - ```dsp_factor```: the down-sample rate, e.g., ```dsp_factor=4``` means down-sampling the resulting images and the corresponding camera parameters by a factor of 4.
+    - ```dsp_factor```: the down-sample rate, e.g., ```dsp_factor=4``` means down-sampling the resulting images and the related intrinsic parameters by a factor of 4.
 
     - ```subject_file```: the root path contains the exported image folder ```images``` and ```cams.xml```.
 
