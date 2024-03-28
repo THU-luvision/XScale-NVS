@@ -123,7 +123,7 @@ All configs for the sebsequent neural rendering pipeline are stored in ```config
     - `datasetFolder`: Set as the root data path.
     - `modelName`: Set as the SCENE_NAME. The folder `images_{dsp_factor}` and `cams_{dsp_factor}`, and the mesh `1.obj` should be saved in `datasetFolder/modelName/..`
     - `all_view_list`: Specify the list of view_id (from 0 to the total number of the images / cameras) to be included from `images_{dsp_factor}` and `cams_{dsp_factor}`.
-    - `test_view_list`: Specify the list of view_id to be held out from training for testing.
+    - `test_view_list`: Specify the list of view_id to be held out for testing.
 
 ### ⬇ Ray caching
 This functionality is developed to enable training on high-resolution (e.g., 8K) images, by pre-caching the sliced rasterization buffers in disk. Run by:
