@@ -114,8 +114,8 @@ All configs for the sebsequent neural rendering pipeline are stored in ```config
 - Batch sizes (`cluster_params`):
     - `random_view_batch_size`: How many views to be sampled at once during training.
     - `training_batch_size`: How many rays to be sampled at once for each view during training. Depending on the memory, decrease it if the available memory is less than 24G.
-    - `infer_batch_size`: How many rays to be sampled at once for rendering a single image. Depending on the memory, decrease it if the available memory is less than 24G, and increase it to #rays for the desired render resolution (e.g., 2073600=1080*1920 for rendering at 1080p) when having enough memory.
-    - Other parameters are related to the dynamic ray loading during training and have been optimized for the best results.
+    - `infer_batch_size`: How many rays to be sampled at once for rendering a single image. Depending on the memory, decrease it if the available memory is less than 24G, or increase it to #rays for the desired render resolution (e.g., 2073600=1080*1920 for rendering at 1080p) when having enough memory.
+    - Other parameters are related to the dynamic ray loading mechanism for training and have been optimized for the best results.
 
 - Rasterization-related parameters (`render_params`):
     - The default values can always be fixed for good results.
