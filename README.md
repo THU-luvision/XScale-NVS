@@ -142,7 +142,12 @@ After training, render the test views by:
 ```bash
 python -u agents/render.py
 ```
-The current release only supports inference on specified test views. Scripts for free-viewpoint rendering will be integrated soon.
+The current release only supports inference on the specified test views. Scripts for free-viewpoint rendering will be integrated soon.
+
+## 📃 TODO list
+- Add free-viewpoint rendering demo scripts, supported by Blender.
+- Integration into [nerf-studio](https://github.com/nerfstudio-project/nerfstudio).
+- Release of the GigaNVS Dataset.
 
 ## 🎓 Citation
 
