@@ -28,7 +28,7 @@ class Params(object):
         self.checkpoint_dir = os.path.join(self.root_file, 'experiment/train/state', self.exp_id)
 
         self.load_checkpoint_dir = None
-        # self.load_checkpoint_dir = "/data/guangyu/aLit/record/experiment/train/state/0110/syt_13_22_s1/epoch:01000.pth.tar"
+        # self.load_checkpoint_dir = "/Absolute/path/to/your/ckpt/epoch:01000.pth.tar"
         self.mode = 'train'
 
     def network_params(self):
