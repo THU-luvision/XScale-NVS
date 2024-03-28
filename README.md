@@ -104,7 +104,7 @@ All configs for the sebsequent neural rendering pipeline are stored in ```config
 
 - Root configs (`root_params`):
     - `exp_id`: The ID for the current run.
-    - `root_file`: The root path to store the training logs (`root_file/experiment/train/log/`) and ckpts (`root_file/experiment/train/state/`), and also the render results (`root_file/experiment/point_exp`).
+    - `root_file`: The root path to store the training logs, checkpoints, and also the render results.
     - `_input_data_rootFld`: The root path to the data.
     - `load_checkpoint_dir`: The absolute path to load the specified ckpt for inference or further training. Set as `None` when training from scratch.
 
