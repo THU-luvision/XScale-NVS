@@ -154,5 +154,12 @@ The current release only supports inference on the specified test views. Scripts
 Please cite our paper:
 
 ```bibtex
-
+@misc{wang2024xscalenvs,
+      title={XScale-NVS: Cross-Scale Novel View Synthesis with Hash Featurized Manifold}, 
+      author={Guangyu Wang and Jinzhi Zhang and Fan Wang and Ruqi Huang and Lu Fang},
+      year={2024},
+      eprint={2403.19517},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
