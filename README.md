@@ -3,7 +3,7 @@
 This repository is the official implementation of the CVPR'24 paper titled "XScale-NVS: Cross-Scale Novel View Synthesis with Hash Featurized Manifold".
 
 [![Website](doc/badge-website.svg)](https://xscalenvs.github.io/)
-[![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)](https://arxiv.org/abs/2312.02145)
+[![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)](https://arxiv.org/abs/2403.19517)
 
 Guangyu Wang,
 Jinzhi Zhang,
@@ -19,7 +19,7 @@ We propose XScale-NVS for high-fidelity cross-scale novel view synthesis of real
 (a) UV-based featurizations tend to disorganize the feature distribution due to the inevitable distortions in surface parametrization. (b) Existing 3D-surface-based featurizations fail to express the sub-primitive-scale intricate details given the limited discretization resolution. (c) Volumetric featurizations inevitably yield a dispersed weight distribution during volume rendering, where many multi-view inconsistent yet highly weighted samples ambiguate surface colour and deteriorate surface features with inconsistent colour gradient. (d) Our method leverages hash encoding to unlock the dependence of featuremetric resolution on discretization resolution, while simultaneously utilizes rasterization to fully unleash the expressivity of volumetric hash encoding by propagating clean and multi-view consistent signals to surface features.
 
 ## 📢 News
-2024-04-01: <a href="https://arxiv.org/abs/2312.02145"><img src="https://img.shields.io/badge/arXiv-PDF-b31b1b" height="16"></a> Paper and code release. <br>
+2024-04-01: <a href="https://arxiv.org/abs/2403.19517"><img src="https://img.shields.io/badge/arXiv-PDF-b31b1b" height="16"></a> Paper and code release. <br>
 2024-02-27: Accepted to <b>CVPR 2024</b>. <br>
 
 ## 🛠️ Setup
