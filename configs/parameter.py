@@ -102,10 +102,11 @@ class Params(object):
         self.dsp_factor = 4
         self.datasetFolder = '/Your/path/to/dataset'
         self.modelName = "SCENE_NAME"
+        self.meshName = "1.obj"
         self.splitName = None
         self.imgNamePattern = os.path.join(self.datasetFolder, self.modelName, "images_{}/*.JPG".format(self.dsp_factor))
         self.poseFolder = os.path.join(self.datasetFolder, self.modelName, "cams_{}".format(self.dsp_factor))
-        self.atlas_load_path = os.path.join(self.datasetFolder, self.modelName, "1.obj")
+        self.atlas_load_path = os.path.join(self.datasetFolder, self.modelName, self.meshName)
         self.attribute_cache_path = os.path.join(self.root_file, 'experiment/caches', self.modelName, 'ss_{}'.format(self.ss_ratio))
         
         # -----------------------------------------------------------------------------------------------------------

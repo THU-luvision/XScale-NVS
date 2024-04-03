@@ -58,7 +58,7 @@ Estimate per-image camera parameters and reconstruct the dense geometry (in the 
 
 ### ⚙️ File formats
 
-After photogrammetry, export the undistorted images, camera parameters, and the reconstructed mesh model ```1.obj``` in the folder ```SCENE_NAME``` as:
+After photogrammetry, export the undistorted images, camera parameters, and the reconstructed mesh model ```YourMeshName.MeshEXT``` in the folder ```SCENE_NAME``` as:
 ```
 SCENE_NAME                          
 ├── images_{dsp_factor}                 
@@ -69,8 +69,10 @@ SCENE_NAME
 │   ├── IMGNAME1_cam.txt   
 │   ├── IMGNAME2_cam.txt   
 │   └── ...                
-└── 1.obj              
+└── YourMeshName.MeshEXT             
 ```
+
+Note that the mesh can be any formats supported by [trimesh](https://trimesh.org/), i.e., `MeshEXT` can be the commonly used `.ply`, `.obj`, etc.
 
 The camera convention strictly follows [MVSNet](https://github.com/YoYo000/MVSNet/tree/master), where the camera parameters are defined in the ```.txt``` file, with the extrinsic `E = [R|t]` and intrinsic `K` being expressed as:
 
@@ -121,7 +123,8 @@ All configs for the sebsequent neural rendering pipeline are stored in ```config
 
 - Data loading configs (`load_params`):
     - `datasetFolder`: Set as the root data path.
-    - `modelName`: Set as the SCENE_NAME. The folder `images_{dsp_factor}` and `cams_{dsp_factor}`, and the mesh `1.obj` should be saved in `datasetFolder/modelName/..`
+    - `modelName`: Set as the SCENE_NAME. The folder `images_{dsp_factor}` and `cams_{dsp_factor}`, and the mesh `YourMeshName.MeshEXT` should be saved in `datasetFolder/modelName/..`
+    - `meshName`: Set as YourMeshName.MeshEXT. Note that the mesh can be any formats supported by [trimesh](https://trimesh.org/). The folder `images_{dsp_factor}` and `cams_{dsp_factor}`, and the mesh `YourMeshName.MeshEXT` should be saved in `datasetFolder/modelName/..`
     - `all_view_list`: Specify the list of view_id (from 0 to the total number of the images / cameras) to be included from `images_{dsp_factor}` and `cams_{dsp_factor}`.
     - `test_view_list`: Specify the list of view_id to be held out for testing.
 
