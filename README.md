@@ -33,7 +33,7 @@ The code was tested on:
 Create the environment and install dependencies using **conda** and <b>pip</b>:
 
 ```bash
-conda create -n xscalenvs --file environment.yml
+conda env create -f environment.yml
 conda activate xscalenvs
 ```
 
