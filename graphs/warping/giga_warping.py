@@ -123,7 +123,7 @@ class WarpingMachine(nn.Module):
                             inlier_mask = inlier_mask[:, crop_h: temp_h - crop_h, crop_w: temp_w - crop_w, ...]
 
                     for v in range(num_batch_view):
-                        colour = images_ori_batch[inlier_mask[v, ..., 0]].detach().cpu()
+                        colour = images_ori_batch[inlier_mask[v, ..., 0].detach().cpu()].detach().cpu()
                         xyz = []
                         normal = []
                         viewdr = []
@@ -137,11 +137,11 @@ class WarpingMachine(nn.Module):
                                 viewdr.append(tmp_vdr)
                         
                         nrm_vis = normal[0].detach().cpu()
-                        xyz = torch.stack(xyz, dim=0)[:, inlier_mask[v, ..., 0]].detach().cpu().permute(1,0,2)
-                        normal = torch.stack(normal, dim=0)[:, inlier_mask[v, ..., 0]].detach().cpu().permute(1,0,2)
-                        viewdr = torch.stack(viewdr, dim=0)[:, inlier_mask[v, ..., 0]].detach().cpu().permute(1,0,2)
+                        xyz = torch.stack(xyz, dim=0)[:, inlier_mask[v, ..., 0].detach().cpu()].detach().cpu().permute(1,0,2)
+                        normal = torch.stack(normal, dim=0)[:, inlier_mask[v, ..., 0].detach().cpu()].detach().cpu().permute(1,0,2)
+                        viewdr = torch.stack(viewdr, dim=0)[:, inlier_mask[v, ..., 0].detach().cpu()].detach().cpu().permute(1,0,2)
                         
-                        nrm_vis[~inlier_mask[v, ..., 0]] == 0.0
+                        nrm_vis[~inlier_mask[v, ..., 0].detach().cpu()] == 0.0
                         vis_n = (nrm_vis.numpy()[..., ::-1] * 0.5 + 0.5)*255
                         # images_ori_batch[~frg.mask_ori[v, ..., 0]] = 0.0
                         vis_c = images_ori_batch.cpu().numpy()*255

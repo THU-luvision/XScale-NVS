@@ -129,12 +129,12 @@ class WarpingMachine(nn.Module):
                             inlier_mask = inlier_mask[:, crop_h: temp_h - crop_h, crop_w: temp_w - crop_w, ...]
                                                                 
                     nrm_vis = normal[0].detach().cpu()
-                    xyz = xyz[:, inlier_mask[v, ..., 0]].detach().cpu().permute(1,0,2)
-                    normal = normal[:, inlier_mask[v, ..., 0]].detach().cpu().permute(1,0,2)
-                    viewdr = viewdr[:, inlier_mask[v, ..., 0]].detach().cpu().permute(1,0,2)
-                    colour = images_ori_batch[inlier_mask[v, ..., 0]].detach().cpu()
+                    xyz = xyz[:, inlier_mask[v, ..., 0].detach().cpu()].detach().cpu().permute(1,0,2)
+                    normal = normal[:, inlier_mask[v, ..., 0].detach().cpu()].detach().cpu().permute(1,0,2)
+                    viewdr = viewdr[:, inlier_mask[v, ..., 0].detach().cpu()].detach().cpu().permute(1,0,2)
+                    colour = images_ori_batch[inlier_mask[v, ..., 0].detach().cpu()].detach().cpu()
                     
-                    nrm_vis[~inlier_mask[v, ..., 0]] == 0.0
+                    nrm_vis[~inlier_mask[v, ..., 0].detach().cpu()] == 0.0
                     vis_n = (nrm_vis.numpy()[..., ::-1] * 0.5 + 0.5)*255
                     vis_c = images_ori_batch.cpu().numpy()*255
                     vis = vis_n * 0.3 + vis_c * 0.7
