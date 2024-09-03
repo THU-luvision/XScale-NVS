@@ -5,7 +5,6 @@ import random
 import os
 import imageio
 sys.path.append("../")
-from utils.base_util import interpolate_cameras
 from configs.parameter import Params
 import time
 import numpy as np
@@ -77,17 +76,6 @@ class MVSDataset(Dataset):
         # self.cameraKO4s = torch.from_numpy(self.cameraKO4s).type(torch.FloatTensor)         # (N_v, 3, 3)
         self.cameraTs_new = torch.from_numpy(self.cameraTs_new).type(torch.FloatTensor)     # (N_v, 3)
         # self.imgs_all = torch.from_numpy(self.imgs_all).type(torch.FloatTensor)             # (N_v, H, W, 3)
-
-    def create_novel_view(self, cameraRTO4s, cameraKO4s):
-        cameraP0s_interpolate, cameraPOs_interpolate, cameraKOs_interpolate, \
-        cameraRT4s_interpolate, cameraTs_interpolate = interpolate_cameras(cameraRTO4s[None, ...],
-                                                                           cameraKO4s[None, ...],
-                                                                           self.params.inter_choose,
-                                                                           self.params.zoomin_rate,
-                                                                           self.params.interpolate_novel_view_num,
-                                                                           direction=self.params.interpolate_direction,
-                                                                           zoomin_flag=self.params.inter_zoomin)
-        return cameraP0s_interpolate[0], cameraTs_interpolate[0]
 
 flip_mat = np.array([
     [1, 0, 0, 0],
